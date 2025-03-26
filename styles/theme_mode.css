@@ -1,0 +1,24 @@
+/*———————— Theme mode styles ————————*/
+
+[data-theme-toggle] {
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+
+[data-theme-toggle] {
+    .light {
+        display: none;
+    }
+    .dark {
+        display: block;
+    }
+    &:has( :checked ) {
+        .light {
+            display: block;
+        }
+        .dark {
+            display: none;
+        }
+    }
+}
