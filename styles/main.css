@@ -323,22 +323,28 @@ header:has(input[id="3"]:checked) ~ section [data-support]
     row-gap: var(--space-100);
 }
 
-[data-nx-device] {
+.devices-content div {
+    display: flex;
+    justify-content: center;
+}
 
+
+
+[data-nx-device] {
     
-    padding: var(--space-050) var(--space-100);
+    padding: var(--space-075) var(--space-100);
     border-radius: var(--radius-4);
     border: var(--solid-1) var(--bg-color-4);
     
     & > div {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     input {
         width: 120px;
-        text-align: center;
+        text-align: left;
         font-size: var(--size-3);
         user-select: none;
         pointer-events: none;
