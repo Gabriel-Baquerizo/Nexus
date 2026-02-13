@@ -326,10 +326,16 @@ header:has(input[id="3"]:checked) ~ section [data-support]
 .devices-content {
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--space-100);
-    row-gap: var(--space-100);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: var(--space-050);
+    row-gap: var(--space-050);
     justify-content: space-around;
+
+    @media (max-width: 1030px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: var(--space-100);
+        row-gap: var(--space-100);
+    }
 
     @media (max-width: 900px) {
         grid-template-columns: 1fr 1fr;
@@ -337,7 +343,8 @@ header:has(input[id="3"]:checked) ~ section [data-support]
     }
 
     @media (max-width: 780px) {
-        column-gap: var(--space-200);
+
+        column-gap: var(--space-100);
     }
 }
 
@@ -353,7 +360,7 @@ header:has(input[id="3"]:checked) ~ section [data-support]
 
 [data-nx-device] {
     
-    padding: var(--space-075) var(--space-100);
+    padding: var(--space-050) var(--space-100);
     border-radius: var(--radius-4);
     border: var(--solid-1) var(--bg-color-4);
     
