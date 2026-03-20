@@ -108,9 +108,17 @@ function loadData(id) {
 
   })
   .catch(error => {
-    console.log('Hubo un problema:', error);
+    // console.log('Hubo un problema:', error);
+    const message = `Hubo un problema al cargar datos: ${error?.message ?? String(error)}`;
+    applyInputError(inputEl, true);
+    return { ok: false, message };
   });
 
+}
+
+function applyInputError(el, hasError) {
+  if (!el) return; // evita errores si el elemento no existe
+  el.classList.toggle("input-error", hasError);
 }
  
 //————————— Input para buscar locales
